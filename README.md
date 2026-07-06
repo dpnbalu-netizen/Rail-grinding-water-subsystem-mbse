@@ -137,7 +137,7 @@ Nine system requirements (SYS-001–SYS-009), managed in DOORS Next, each alloca
 - [x] STM
 - [x] Three Sequence Diagrams, traced to STM regions
 - [x] RTM finalized
-- [ ] Publish written case study on modelling decisions
+- [x] Publish written case study on modelling decisions
 
 ## About This Project
 
