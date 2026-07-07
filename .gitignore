@@ -1,0 +1,31 @@
+# Eclipse / Papyrus workspace metadata
+.metadata/
+.project
+.classpath
+.settings/
+RemoteSystemsTempFiles/
+.recommenders/
+
+# Capella workspace files
+.aird.backup
+*.afm
+.timestamp
+
+# Model backup/lock files
+*.di_
+*.notation_
+*.uml_
+*~
+*.bak
+*.swp
+*.tmp
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+*.iml
+.idea/
