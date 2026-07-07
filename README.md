@@ -25,7 +25,7 @@ A deliberate scoping decision: DOORS Next and Papyrus are demonstrated as indepe
 
 ## Methodology Journey: Capella → Papyrus
 
-This subsystem was first developed as a complete Arcadia-based case study in Capella, covering Operational Analysis, System Analysis, Logical Architecture, and Physical Architecture, with full requirements-to-verification traceability (see full documentation: [Capella Documentation](./capella/Documentation_RailGrinding_Machine_Water_Subsystem_V1_0.pdf))
+This subsystem was first developed as a complete Arcadia-based case study in Capella, covering Operational Analysis, System Analysis, Logical Architecture, and Physical Architecture, with full requirements-to-verification traceability (see full documentation:(./capella/Documentation_RailGrinding_Machine_Water_Subsystem_V1_0.pdf))
 
 The architecture was then redeveloped in SysML 1.6 using Papyrus, formalizing requirements management in IBM DOORS Next Generation and extending behavioural depth through detailed State Machine and Sequence Diagram modelling.
 
