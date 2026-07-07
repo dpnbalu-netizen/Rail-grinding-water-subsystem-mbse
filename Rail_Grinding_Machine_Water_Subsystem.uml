@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:DeprecatedElements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/DeprecatedElements" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML/DeprecatedElements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements http://www.eclipse.org/papyrus/sysml/1.6/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements">
+  <uml:Model xmi:id="_Wbbd8GpfEfGUytx5oYpA9Q" name="Rail_Grinding_Machine_Water_Subsystem">
+    <packagedElement xmi:type="uml:Class" xmi:id="_saFLcHCSEfGBCven3WVkOQ" name="Rail grinding Water Subsystem">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_3VuZoHCSEfGBCven3WVkOQ" name="Store Water for Grinding"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_312rMHCSEfGBCven3WVkOQ" name="Supply Grinding Water"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_4QHlUHCSEfGBCven3WVkOQ" name="Activate Hazard Suppression"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_4d0DEHCSEfGBCven3WVkOQ" name="Supply Hazard Suppression Flow"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_4pr74HCSEfGBCven3WVkOQ" name="Provide Hose and Spray Coverage"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_7EE6sHCSEfGBCven3WVkOQ" name="Monitor Tank Water Level"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_60XDsHCSEfGBCven3WVkOQ" name="Provide Crew Water Supply"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_7QQ8kHCSEfGBCven3WVkOQ" name="Execute Emergency Shutdown"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_7eeXsHCSEfGBCven3WVkOQ" name="Support External Fill"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_dWGKsHCZEfGBCven3WVkOQ" name="Water Subsystem" useCase="_YccUIHCZEfGBCven3WVkOQ _SNGdAHCZEfGBCven3WVkOQ _l6EW4HCZEfGBCven3WVkOQ _stxfUHCZEfGBCven3WVkOQ">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_YccUIHCZEfGBCven3WVkOQ" name="Detect Low Water" subject="_dWGKsHCZEfGBCven3WVkOQ"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_VYy88HCZEfGBCven3WVkOQ" name="Provide Crew Water"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_PaoVYHCZEfGBCven3WVkOQ" name="Control Hazards"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_MvPqAHCVEfGBCven3WVkOQ" name="Deliver Pressurized Water for Grinding"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_SNGdAHCZEfGBCven3WVkOQ" name="Manage Onboard Water Storage" subject="_dWGKsHCZEfGBCven3WVkOQ"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_l6EW4HCZEfGBCven3WVkOQ" name="Refill Water Supply" subject="_dWGKsHCZEfGBCven3WVkOQ"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_stxfUHCZEfGBCven3WVkOQ" name="Execute Emergency Shutdown" subject="_dWGKsHCZEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_DLPK4HCaEfGBCven3WVkOQ" name="Maintenance Person"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_FwnRsHCaEfGBCven3WVkOQ" name="Safety Person"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_JLrDUHCaEfGBCven3WVkOQ" name="Machine Operator"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_OmyBIHCaEfGBCven3WVkOQ" name="External Filling Point"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZAaucHCaEfGBCven3WVkOQ" memberEnd="_ZAdxwHCaEfGBCven3WVkOQ _ZAeY0HCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZAcjoHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZAdKsHCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ZAdxwHCaEfGBCven3WVkOQ" name="deliver pressurized water for grinding" type="_MvPqAHCVEfGBCven3WVkOQ" association="_ZAaucHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ZAeY0HCaEfGBCven3WVkOQ" name="machine operator" type="_JLrDUHCaEfGBCven3WVkOQ" association="_ZAaucHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aOH3sHCaEfGBCven3WVkOQ" memberEnd="_aOJF0nCaEfGBCven3WVkOQ _aOJF03CaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aOJF0HCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aOJF0XCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_aOJF0nCaEfGBCven3WVkOQ" name="control hazards" type="_PaoVYHCZEfGBCven3WVkOQ" association="_aOH3sHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_aOJF03CaEfGBCven3WVkOQ" name="maintenance person" type="_FwnRsHCaEfGBCven3WVkOQ" association="_aOH3sHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bd1MEHCaEfGBCven3WVkOQ" memberEnd="_bd2aMnCaEfGBCven3WVkOQ _bd3BQHCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bd2aMHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bd2aMXCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bd2aMnCaEfGBCven3WVkOQ" name="maintenance person" type="_DLPK4HCaEfGBCven3WVkOQ" association="_bd1MEHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bd3BQHCaEfGBCven3WVkOQ" name="manage onboard water storage" type="_SNGdAHCZEfGBCven3WVkOQ" association="_bd1MEHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_c139EHCaEfGBCven3WVkOQ" memberEnd="_c15LMnCaEfGBCven3WVkOQ _c15yQHCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c15LMHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c15LMXCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_c15LMnCaEfGBCven3WVkOQ" name="maintenance person" type="_DLPK4HCaEfGBCven3WVkOQ" association="_c139EHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_c15yQHCaEfGBCven3WVkOQ" name="provide crew water" type="_VYy88HCZEfGBCven3WVkOQ" association="_c139EHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fQ08kHCaEfGBCven3WVkOQ" memberEnd="_fQ2xwXCaEfGBCven3WVkOQ _fQ2xwnCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fQ2KsHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fQ2xwHCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fQ2xwXCaEfGBCven3WVkOQ" name="external filling point" type="_OmyBIHCaEfGBCven3WVkOQ" association="_fQ08kHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fQ2xwnCaEfGBCven3WVkOQ" name="refill water supply" type="_l6EW4HCZEfGBCven3WVkOQ" association="_fQ08kHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gjAWIHCaEfGBCven3WVkOQ" memberEnd="_gjBkQHCaEfGBCven3WVkOQ _gjBkQXCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gjA9MHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gjA9MXCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gjBkQHCaEfGBCven3WVkOQ" name="machine operator" type="_JLrDUHCaEfGBCven3WVkOQ" association="_gjAWIHCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gjBkQXCaEfGBCven3WVkOQ" name="execute emergency shutdown" type="_stxfUHCZEfGBCven3WVkOQ" association="_gjAWIHCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3cbk8HCaEfGBCven3WVkOQ" memberEnd="_3cdaIXCaEfGBCven3WVkOQ _3cdaInCaEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3cczEHCaEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3cdaIHCaEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3cdaIXCaEfGBCven3WVkOQ" name="refill water supply" type="_l6EW4HCZEfGBCven3WVkOQ" association="_3cbk8HCaEfGBCven3WVkOQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3cdaInCaEfGBCven3WVkOQ" name="maintenance person" type="_c139EHCaEfGBCven3WVkOQ" association="_3cbk8HCaEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_W9bGgHCbEfGBCven3WVkOQ" name="Water Subsystem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q47_EHCcEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" aggregation="composite" association="_Q46J4HCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TJaXcHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJi6UHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TPJBcnCcEfGBCven3WVkOQ" name="cooling unit " type="_gVBvEHCbEfGBCven3WVkOQ" aggregation="composite" association="_TPHzUHCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tx8-IHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tx-zUHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TzN-4nCcEfGBCven3WVkOQ" name="hazard suppression unit " type="_ieShoHCbEfGBCven3WVkOQ" aggregation="composite" association="_TzMJsHCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U5spUHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U5t3cHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_USpF0nCcEfGBCven3WVkOQ" name="emergency control unit " type="__xmqsHCbEfGBCven3WVkOQ" aggregation="composite" association="_USn3sHCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VbOpEHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VbRFUHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VGBqknCcEfGBCven3WVkOQ" name="crew water supply unit" type="_u-xmsHCbEfGBCven3WVkOQ" aggregation="composite" association="_VF_1YHCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V2ZiIHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V2clcHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_V3-E4HCcEfGBCven3WVkOQ" name="monitoring and control unit " type="_l0RmAHCbEfGBCven3WVkOQ" aggregation="composite" association="_V36agHCcEfGBCven3WVkOQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WXSosHCdEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WXVsAHCdEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_evk0MHCbEfGBCven3WVkOQ" name="Water Management Unit">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_J2JxcnCfEfGBCven3WVkOQ" name="main water tank assembly 6000l" type="_wVblsHCdEfGBCven3WVkOQ" aggregation="composite" association="_J2HVMHCfEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BuG20HCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BuJTEHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KRH2MnCfEfGBCven3WVkOQ" name="water pump 15 hp" type="_5Z_WcHCdEfGBCven3WVkOQ" aggregation="composite" association="_KRFZ8HCfEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CZLNEHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CZNpUHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KnK-sXCfEfGBCven3WVkOQ" name="external fillling point" type="_9GCKYHCdEfGBCven3WVkOQ" aggregation="composite" association="_KnIicHCfEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C65aEHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C672UHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_K_AP4nCfEfGBCven3WVkOQ" name="water pump 0.5 hp" type="__ZL4wHCdEfGBCven3WVkOQ" aggregation="composite" association="_K-9MkHCfEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DYpGAHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DYsJUHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LVHp0nCfEfGBCven3WVkOQ" name="low lever sensor" type="_CGRxIHCeEfGBCven3WVkOQ" aggregation="composite" association="_LVFNkHCfEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D3iBcHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_D3kdsHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Dr1iQHC1EfGBCven3WVkOQ" name="water_out_hazard" visibility="public" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_M-mHEHC1EfGBCven3WVkOQ" name="water_out_crew" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Pt4X0HC1EfGBCven3WVkOQ" name="water_out_grinding" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_XUIXgHC1EfGBCven3WVkOQ" name="level_signal_out" visibility="public" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_eD2-4HC1EfGBCven3WVkOQ" name="external_water_in" visibility="public" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_j5QsAHC1EfGBCven3WVkOQ" name="shutdown_in" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_wVblsHCdEfGBCven3WVkOQ" name="Main Water Tank Assembly 6000L"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_5Z_WcHCdEfGBCven3WVkOQ" name="Water Pump 15 HP"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_9GCKYHCdEfGBCven3WVkOQ" name="External Fillling Point"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="__ZL4wHCdEfGBCven3WVkOQ" name="Water Pump 0.5 HP"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_CGRxIHCeEfGBCven3WVkOQ" name="Low Lever Sensor"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_gVBvEHCbEfGBCven3WVkOQ" name="Cooling Unit ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_S7yq0nCgEfGBCven3WVkOQ" name="main spray bar assembly" type="_QX1yQHCeEfGBCven3WVkOQ" aggregation="composite" association="_S7qvAHCgEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nUXGcHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nUY7oHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UVGnIXCgEfGBCven3WVkOQ" name="ditch &amp; tie spray assembly" type="_V3KhsHCeEfGBCven3WVkOQ" aggregation="composite" association="_UVC8wHCgEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oojSMHCgEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oolHYHCgEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_842WEHC1EfGBCven3WVkOQ" name="water_in" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_QX1yQHCeEfGBCven3WVkOQ" name="Main Spray Bar Assembly"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_V3KhsHCeEfGBCven3WVkOQ" name="Ditch &amp; Tie Spray Assembly"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_ieShoHCbEfGBCven3WVkOQ" name="Hazard Suppression Unit ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cOrWAnChEfGBCven3WVkOQ" name="water cannon" type="_aXHe0HCeEfGBCven3WVkOQ" aggregation="composite" association="_cOo5wHChEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zkmf8HCiEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZkoVIHCiEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_crhqEnChEfGBCven3WVkOQ" name="hose reel (camp car)" type="_f9vJEHCeEfGBCven3WVkOQ" aggregation="composite" association="_crf04HChEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yy7LYHCiEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yy9noHCiEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dPD08nChEfGBCven3WVkOQ" name="hose reel (grind car)" type="_dRN4cHCeEfGBCven3WVkOQ" aggregation="composite" association="_dPAxoHChEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_afNuEHCiEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_afRYcHCiEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_vCSO4HC1EfGBCven3WVkOQ" name="water_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_vf_ekHC1EfGBCven3WVkOQ" name="control_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_wZHe8HC1EfGBCven3WVkOQ" name="water_out" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_aXHe0HCeEfGBCven3WVkOQ" name="Water Cannon"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_dRN4cHCeEfGBCven3WVkOQ" name="Hose Reel (Grind Car)"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_f9vJEHCeEfGBCven3WVkOQ" name="Hose Reel (Camp Car)"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_l0RmAHCbEfGBCven3WVkOQ" name="Monitoring and Control Unit ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AhNzonClEfGBCven3WVkOQ" name="control and sensing assembly" type="_qmiTwHCeEfGBCven3WVkOQ" aggregation="composite" association="_AhJiMHClEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NkxJgHClEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NkzlwHClEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ENK4QHC2EfGBCven3WVkOQ" name="control_out" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_FOgZcHC2EfGBCven3WVkOQ" name="hazard_signal_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Jof4gHC2EfGBCven3WVkOQ" name="level_signal_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Kd5PcHC2EfGBCven3WVkOQ" name="control_out" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_qmiTwHCeEfGBCven3WVkOQ" name="Control and Sensing Assembly"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_u-xmsHCbEfGBCven3WVkOQ" name="Crew Water Supply Unit">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cr4vEHCkEfGBCven3WVkOQ" name="overhead tank assembly" type="_wKdPUHCeEfGBCven3WVkOQ" aggregation="composite" association="_cr0doHCkEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pEecYHCkEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pEg4oHCkEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dOhiEnCkEfGBCven3WVkOQ" name="external filling point" type="_0O8_gHCeEfGBCven3WVkOQ" aggregation="composite" association="_dOfs4HCkEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x8848HCkEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x8_VMHCkEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4hi-oHC1EfGBCven3WVkOQ" name="water_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_6Lk3gHC1EfGBCven3WVkOQ" name="water_out" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_wKdPUHCeEfGBCven3WVkOQ" name="Overhead Tank Assembly"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_0O8_gHCeEfGBCven3WVkOQ" name="External Filling Point"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="__xmqsHCbEfGBCven3WVkOQ" name="Emergency Control Unit ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_srtMUnClEfGBCven3WVkOQ" name="emergency cutoff assembly" type="_tYwjwHCeEfGBCven3WVkOQ" aggregation="composite" association="_srrXIHClEfGBCven3WVkOQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ytpgoHClEfGBCven3WVkOQ" name="LiteralInteger1" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yttyEHClEfGBCven3WVkOQ" name="LiteralUnlimitedNatural1" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Ml3BgHC2EfGBCven3WVkOQ" name="shutdown_trigger_in" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_k31XoHC2EfGBCven3WVkOQ" name="shutdown_out" aggregation="composite"/>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_tYwjwHCeEfGBCven3WVkOQ" name="Emergency Cutoff Assembly"/>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Q46J4HCcEfGBCven3WVkOQ" memberEnd="_Q47_EHCcEfGBCven3WVkOQ _Q48mInCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q47YAHCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q47YAXCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Q48mInCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_Q46J4HCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TPHzUHCcEfGBCven3WVkOQ" memberEnd="_TPJBcnCcEfGBCven3WVkOQ _TPJognCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TPJBcHCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TPJBcXCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_TPJognCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_TPHzUHCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_TzMJsHCcEfGBCven3WVkOQ" memberEnd="_TzN-4nCcEfGBCven3WVkOQ _TzOl8nCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TzN-4HCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TzN-4XCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_TzOl8nCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_TzMJsHCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_USn3sHCcEfGBCven3WVkOQ" memberEnd="_USpF0nCcEfGBCven3WVkOQ _USps4nCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_USpF0HCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_USpF0XCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_USps4nCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_USn3sHCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VF_1YHCcEfGBCven3WVkOQ" memberEnd="_VGBqknCcEfGBCven3WVkOQ _VGCRonCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VGBqkHCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VGBqkXCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VGCRonCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_VF_1YHCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_V36agHCcEfGBCven3WVkOQ" memberEnd="_V3-E4HCcEfGBCven3WVkOQ _V3_6EXCcEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_V39d0HCcEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_V39d0XCcEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_V3_6EXCcEfGBCven3WVkOQ" name="water subsystem" type="_W9bGgHCbEfGBCven3WVkOQ" association="_V36agHCcEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_J2HVMHCfEfGBCven3WVkOQ" memberEnd="_J2JxcnCfEfGBCven3WVkOQ _J2KYgnCfEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_J2JxcHCfEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_J2JxcXCfEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_J2KYgnCfEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" association="_J2HVMHCfEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KRFZ8HCfEfGBCven3WVkOQ" memberEnd="_KRH2MnCfEfGBCven3WVkOQ _KRJrYnCfEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KRH2MHCfEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KRH2MXCfEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_KRJrYnCfEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" association="_KRFZ8HCfEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KnIicHCfEfGBCven3WVkOQ" memberEnd="_KnK-sXCfEfGBCven3WVkOQ _KnMz4XCfEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KnKXoHCfEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KnK-sHCfEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_KnMz4XCfEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" association="_KnIicHCfEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_K-9MkHCfEfGBCven3WVkOQ" memberEnd="_K_AP4nCfEfGBCven3WVkOQ _K_CFEnCfEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K_AP4HCfEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K_AP4XCfEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_K_CFEnCfEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" association="_K-9MkHCfEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_LVFNkHCfEfGBCven3WVkOQ" memberEnd="_LVHp0nCfEfGBCven3WVkOQ _LVJfAXCfEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LVHp0HCfEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LVHp0XCfEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_LVJfAXCfEfGBCven3WVkOQ" name="water management unit" type="_evk0MHCbEfGBCven3WVkOQ" association="_LVFNkHCfEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_S7qvAHCgEfGBCven3WVkOQ" memberEnd="_S7yq0nCgEfGBCven3WVkOQ _S7yq1XCgEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S7yq0HCgEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S7yq0XCgEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_S7yq1XCgEfGBCven3WVkOQ" name="cooling unit " type="_gVBvEHCbEfGBCven3WVkOQ" association="_S7qvAHCgEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UVC8wHCgEfGBCven3WVkOQ" memberEnd="_UVGnIXCgEfGBCven3WVkOQ _UVH1QnCgEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UVGAEHCgEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UVGnIHCgEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UVH1QnCgEfGBCven3WVkOQ" name="cooling unit " type="_gVBvEHCbEfGBCven3WVkOQ" association="_UVC8wHCgEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cOo5wHChEfGBCven3WVkOQ" memberEnd="_cOrWAnChEfGBCven3WVkOQ _cOr9EnChEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cOrWAHChEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cOrWAXChEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cOr9EnChEfGBCven3WVkOQ" name="hazard suppression unit " type="_ieShoHCbEfGBCven3WVkOQ" association="_cOo5wHChEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_crf04HChEfGBCven3WVkOQ" memberEnd="_crhqEnChEfGBCven3WVkOQ _cri4MnChEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_crhqEHChEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_crhqEXChEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cri4MnChEfGBCven3WVkOQ" name="hazard suppression unit " type="_ieShoHCbEfGBCven3WVkOQ" association="_crf04HChEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dPAxoHChEfGBCven3WVkOQ" memberEnd="_dPD08nChEfGBCven3WVkOQ _dPFqInChEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dPD08HChEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dPD08XChEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_dPFqInChEfGBCven3WVkOQ" name="hazard suppression unit " type="_ieShoHCbEfGBCven3WVkOQ" association="_dPAxoHChEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cr0doHCkEfGBCven3WVkOQ" memberEnd="_cr4vEHCkEfGBCven3WVkOQ _cr59MnCkEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cr4IAHCkEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cr4IAXCkEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cr59MnCkEfGBCven3WVkOQ" name="crew water supply unit" type="_u-xmsHCbEfGBCven3WVkOQ" association="_cr0doHCkEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dOfs4HCkEfGBCven3WVkOQ" memberEnd="_dOhiEnCkEfGBCven3WVkOQ _dOiJInCkEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dOhiEHCkEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dOhiEXCkEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_dOiJInCkEfGBCven3WVkOQ" name="crew water supply unit" type="_u-xmsHCbEfGBCven3WVkOQ" association="_dOfs4HCkEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AhJiMHClEfGBCven3WVkOQ" memberEnd="_AhNzonClEfGBCven3WVkOQ _AhPo0nClEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AhNzoHClEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AhNzoXClEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AhPo0nClEfGBCven3WVkOQ" name="monitoring and control unit " type="_l0RmAHCbEfGBCven3WVkOQ" association="_AhJiMHClEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_srrXIHClEfGBCven3WVkOQ" memberEnd="_srtMUnClEfGBCven3WVkOQ _srvBgXClEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_srtMUHClEfGBCven3WVkOQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_srtMUXClEfGBCven3WVkOQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_srvBgXClEfGBCven3WVkOQ" name="emergency control unit " type="__xmqsHCbEfGBCven3WVkOQ" association="_srrXIHClEfGBCven3WVkOQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WaJQ8HC0EfGBCven3WVkOQ" name="Water_Subsystem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_uJbwwHC0EfGBCven3WVkOQ" name="water Management Unit" type="_evk0MHCbEfGBCven3WVkOQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w1ypUHC0EfGBCven3WVkOQ" name="cooling Unit " type="_gVBvEHCbEfGBCven3WVkOQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w11soHC0EfGBCven3WVkOQ" name="hazard Suppression Unit " type="_ieShoHCbEfGBCven3WVkOQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w126yHC0EfGBCven3WVkOQ" name="monitoring and Control Unit " type="_l0RmAHCbEfGBCven3WVkOQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w14v-HC0EfGBCven3WVkOQ" name="crew Water Supply Unit" type="_u-xmsHCbEfGBCven3WVkOQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_w16lKHC0EfGBCven3WVkOQ" name="emergency Control Unit " type="__xmqsHCbEfGBCven3WVkOQ"/>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_3hFXMHFlEfGBCven3WVkOQ" name="Connector7">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_3hMr8HFlEfGBCven3WVkOQ" partWithPort="_w126yHC0EfGBCven3WVkOQ" role="_ENK4QHC2EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_3hMr8XFlEfGBCven3WVkOQ" partWithPort="_w11soHC0EfGBCven3WVkOQ" role="_vf_ekHC1EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_j2aG4HFmEfGBCven3WVkOQ" name="Connector8">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_j2dKMHFmEfGBCven3WVkOQ" partWithPort="_uJbwwHC0EfGBCven3WVkOQ" role="_Dr1iQHC1EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_j2dKMXFmEfGBCven3WVkOQ" partWithPort="_w11soHC0EfGBCven3WVkOQ" role="_vCSO4HC1EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_wYuX8HFmEfGBCven3WVkOQ" name="Connector9">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_wYxbQHFmEfGBCven3WVkOQ" partWithPort="_uJbwwHC0EfGBCven3WVkOQ" role="_XUIXgHC1EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_wYyCUHFmEfGBCven3WVkOQ" partWithPort="_w126yHC0EfGBCven3WVkOQ" role="_Jof4gHC2EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_3iczsHFmEfGBCven3WVkOQ" name="Connector10">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_3if3AHFmEfGBCven3WVkOQ" partWithPort="_w126yHC0EfGBCven3WVkOQ" role="_Kd5PcHC2EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_3if3AXFmEfGBCven3WVkOQ" partWithPort="_w16lKHC0EfGBCven3WVkOQ" role="_Ml3BgHC2EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_CQHQQHFnEfGBCven3WVkOQ" name="Connector11">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_CQLhsHFnEfGBCven3WVkOQ" partWithPort="_uJbwwHC0EfGBCven3WVkOQ" role="_M-mHEHC1EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_CQLhsXFnEfGBCven3WVkOQ" partWithPort="_w14v-HC0EfGBCven3WVkOQ" role="_4hi-oHC1EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_Mo9TYHFnEfGBCven3WVkOQ" name="Connector12">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_MpA9wHFnEfGBCven3WVkOQ" partWithPort="_uJbwwHC0EfGBCven3WVkOQ" role="_Pt4X0HC1EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_MpBk0HFnEfGBCven3WVkOQ" partWithPort="_w1ypUHC0EfGBCven3WVkOQ" role="_842WEHC1EfGBCven3WVkOQ"/>
+      </ownedConnector>
+      <ownedConnector xmi:type="uml:Connector" xmi:id="_aySlkHFnEfGBCven3WVkOQ" name="Connector13">
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ayUawHFnEfGBCven3WVkOQ" partWithPort="_w16lKHC0EfGBCven3WVkOQ" role="_k31XoHC2EfGBCven3WVkOQ"/>
+        <end xmi:type="uml:ConnectorEnd" xmi:id="_ayVB0HFnEfGBCven3WVkOQ" partWithPort="_uJbwwHC0EfGBCven3WVkOQ" role="_j5QsAHC1EfGBCven3WVkOQ"/>
+      </ownedConnector>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_rbdvkHFtEfGBCven3WVkOQ" name="Satisfy46" client="_evk0MHCbEfGBCven3WVkOQ" supplier="_3VuZoHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_8HV3AHFtEfGBCven3WVkOQ" name="Satisfy47" client="_gVBvEHCbEfGBCven3WVkOQ" supplier="_Wbbd8GpfEfGUytx5oYpA9Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_DyEuEHFuEfGBCven3WVkOQ" name="Satisfy49" client="_ieShoHCbEfGBCven3WVkOQ" supplier="_4d0DEHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_Gp8TEHFuEfGBCven3WVkOQ" name="Satisfy50" client="_Wbbd8GpfEfGUytx5oYpA9Q" supplier="_4pr74HCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_HrBVkHFuEfGBCven3WVkOQ" name="Satisfy51" client="_u-xmsHCbEfGBCven3WVkOQ" supplier="_60XDsHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_JJRcQHFuEfGBCven3WVkOQ" name="Satisfy52" client="_l0RmAHCbEfGBCven3WVkOQ" supplier="_7EE6sHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_KJ1hYHFuEfGBCven3WVkOQ" name="Satisfy53" client="__xmqsHCbEfGBCven3WVkOQ" supplier="_7QQ8kHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_LCK3kHFuEfGBCven3WVkOQ" name="Satisfy54" client="_Wbbd8GpfEfGUytx5oYpA9Q" supplier="_7eeXsHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_hy9SUHFvEfGBCven3WVkOQ" name="Satisfy54" client="_ieShoHCbEfGBCven3WVkOQ" supplier="_4QHlUHCSEfGBCven3WVkOQ"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_XICwEHIlEfGBCven3WVkOQ" name="Water_Subsystem">
+      <region xmi:type="uml:Region" xmi:id="_aL7-4HIlEfGBCven3WVkOQ" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_5LApsHImEfGBCven3WVkOQ" name="grinding_started" source="_eumRwHIlEfGBCven3WVkOQ" target="_Em9lEHImEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_gDHiwHInEfGBCven3WVkOQ" name="mission_aborted" source="_XNL5UHImEfGBCven3WVkOQ" target="_cEhbsHImEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Uzw48HIoEfGBCven3WVkOQ" name="grinding_mission_complete" source="_Em9lEHImEfGBCven3WVkOQ" target="_cEhbsHImEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CEEtYHItEfGBCven3WVkOQ" name="hazard_detected" source="_Em9lEHImEfGBCven3WVkOQ" target="_vrZQcHItEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_idNicHIuEfGBCven3WVkOQ" name="low_water_detected" source="_Em9lEHImEfGBCven3WVkOQ" target="_60wxkHItEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_5A3VkHIuEfGBCven3WVkOQ" name="water_refilled" source="_-JZyIHItEfGBCven3WVkOQ" target="_Em9lEHImEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_dBu7wHIvEfGBCven3WVkOQ" name="critical_condition_uncleared" source="_apPaYHIvEfGBCven3WVkOQ" target="_XNL5UHImEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_7hAhoHIvEfGBCven3WVkOQ" source="_vrZQcHItEfGBCven3WVkOQ" target="_9TkoRHIrEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_9GLvsHIvEfGBCven3WVkOQ" source="_60wxkHItEfGBCven3WVkOQ" target="_929CIHIrEfGBCven3WVkOQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_HHZV8HIwEfGBCven3WVkOQ" name="emergency_signal_from_ECU" source="_Em9lEHImEfGBCven3WVkOQ" target="_XNL5UHImEfGBCven3WVkOQ"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_eumRwHIlEfGBCven3WVkOQ" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Em9lEHImEfGBCven3WVkOQ" name="Normal_Grinding"/>
+        <subvertex xmi:type="uml:State" xmi:id="_XNL5UHImEfGBCven3WVkOQ" name="Emergency_Shutdown"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_cEhbsHImEfGBCven3WVkOQ" name="FinalState5"/>
+        <subvertex xmi:type="uml:State" xmi:id="_r-YeEHIrEfGBCven3WVkOQ" name="Safety Operation">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_vrZQcHItEfGBCven3WVkOQ" name="ep_hazard" kind="entryPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_yPgzAHItEfGBCven3WVkOQ" name="xp_hazard" kind="exitPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_60wxkHItEfGBCven3WVkOQ" name="ep_low water" kind="entryPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_-JZyIHItEfGBCven3WVkOQ" name="xp_low water" kind="exitPoint"/>
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_apPaYHIvEfGBCven3WVkOQ" name="xp_emergency" kind="exitPoint"/>
+          <region xmi:type="uml:Region" xmi:id="_9Tg94HIrEfGBCven3WVkOQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_M3HZMHItEfGBCven3WVkOQ" name="hazard_cleared" source="_yPgzAHItEfGBCven3WVkOQ" target="_Em9lEHImEfGBCven3WVkOQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_3hwd0HIvEfGBCven3WVkOQ" source="_929CIHIrEfGBCven3WVkOQ" target="_-JZyIHItEfGBCven3WVkOQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_8KmRMHIvEfGBCven3WVkOQ" source="_9TkoRHIrEfGBCven3WVkOQ" target="_yPgzAHItEfGBCven3WVkOQ"/>
+            <subvertex xmi:type="uml:State" xmi:id="_9TkoRHIrEfGBCven3WVkOQ" name="Hazard_Suppression"/>
+            <subvertex xmi:type="uml:State" xmi:id="_929CIHIrEfGBCven3WVkOQ" name="Low_Water_Condition"/>
+          </region>
+        </subvertex>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_FxUaMHI4EfGBCven3WVkOQ" name="SD_Emergency_Shutdown">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_2AVD8HR3EfGBCven3WVkOQ" name="WMU" coveredBy="_1EeZgHSUEfGBCven3WVkOQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_5JlT4HR3EfGBCven3WVkOQ" name="ECU" coveredBy="_1EavIHSUEfGBCven3WVkOQ _FFZV4Hb6EfGyhr7ExH-QZQ _efMaQHb7EfGyhr7ExH-QZQ _NQgWIHb6EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_6di2IHR3EfGBCven3WVkOQ" name="MCU" coveredBy="_efNBUHb7EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_BUNjQHb6EfGyhr7ExH-QZQ" name="CU" coveredBy="_FFZV4Xb6EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1EavIHSUEfGBCven3WVkOQ" name="Message20SendEvent" covered="_5JlT4HR3EfGBCven3WVkOQ" message="_1EVPkHSUEfGBCven3WVkOQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1EeZgHSUEfGBCven3WVkOQ" name="Message20ReceiveEvent" covered="_2AVD8HR3EfGBCven3WVkOQ" message="_1EVPkHSUEfGBCven3WVkOQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FFZV4Hb6EfGyhr7ExH-QZQ" name="Message25SendEvent" covered="_5JlT4HR3EfGBCven3WVkOQ" message="_FFPk4Hb6EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FFZV4Xb6EfGyhr7ExH-QZQ" name="Message25ReceiveEvent" covered="_BUNjQHb6EfGyhr7ExH-QZQ" message="_FFPk4Hb6EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_efMaQHb7EfGyhr7ExH-QZQ" name="Message30SendEvent" covered="_5JlT4HR3EfGBCven3WVkOQ" message="_efLzMHb7EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_efNBUHb7EfGyhr7ExH-QZQ" name="Message30ReceiveEvent" covered="_6di2IHR3EfGBCven3WVkOQ" message="_efLzMHb7EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NQgWIHb6EfGyhr7ExH-QZQ" name="Message28ReceiveEvent" covered="_5JlT4HR3EfGBCven3WVkOQ" message="_NQfIAHb6EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_1EVPkHSUEfGBCven3WVkOQ" name="stop_grinding_pump" messageSort="asynchCall" receiveEvent="_1EeZgHSUEfGBCven3WVkOQ" sendEvent="_1EavIHSUEfGBCven3WVkOQ"/>
+      <message xmi:type="uml:Message" xmi:id="_FFPk4Hb6EfGyhr7ExH-QZQ" name="stop_cooling" messageSort="asynchCall" receiveEvent="_FFZV4Xb6EfGyhr7ExH-QZQ" sendEvent="_FFZV4Hb6EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_NQfIAHb6EfGyhr7ExH-QZQ" name="critical_condition_uncleared" messageSort="asynchCall" receiveEvent="_NQgWIHb6EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_efLzMHb7EfGyhr7ExH-QZQ" name="shutdown_complete" messageSort="asynchCall" receiveEvent="_efNBUHb7EfGyhr7ExH-QZQ" sendEvent="_efMaQHb7EfGyhr7ExH-QZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_YCPtcHVlEfGpWMUEQ7eXIg" name="SD_HazardSuppression">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_mXt-MHVlEfGpWMUEQ7eXIg" name="Safety Person" coveredBy="_oXE_AHbzEfGyhr7ExH-QZQ _xfPrInb4EfGyhr7ExH-QZQ _dAfEwHb0EfGyhr7ExH-QZQ _js5u4HbzEfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_n5eE0HVlEfGpWMUEQ7eXIg" name="HSU" coveredBy="_oXFmEHbzEfGyhr7ExH-QZQ _CQ8gAHb0EfGyhr7ExH-QZQ _CRq4wHb0EfGyhr7ExH-QZQ _xfPrIXb4EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_o1-wYHVlEfGpWMUEQ7eXIg" name="WMU" coveredBy="_CQ9HEHb0EfGyhr7ExH-QZQ _CRqRsHb0EfGyhr7ExH-QZQ _CRmAQHb0EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_X_nL4Hb0EfGyhr7ExH-QZQ" name="Water Subsystem" coveredBy="_dAfr0Hb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oXFmEHbzEfGyhr7ExH-QZQ" name="Message6ReceiveEvent" covered="_n5eE0HVlEfGpWMUEQ7eXIg" message="_oXDw4HbzEfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oXE_AHbzEfGyhr7ExH-QZQ" name="Message6SendEvent" covered="_mXt-MHVlEfGpWMUEQ7eXIg" message="_oXDw4HbzEfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CQ8gAHb0EfGyhr7ExH-QZQ" name="Message13SendEvent" covered="_n5eE0HVlEfGpWMUEQ7eXIg" message="_CQ7R4Hb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CQ9HEHb0EfGyhr7ExH-QZQ" name="Message13ReceiveEvent" covered="_o1-wYHVlEfGpWMUEQ7eXIg" message="_CQ7R4Hb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_CRmAQHb0EfGyhr7ExH-QZQ" name="BehaviorExecutionSpecification16" covered="_o1-wYHVlEfGpWMUEQ7eXIg" finish="_CRqRsHb0EfGyhr7ExH-QZQ" start="_CQ9HEHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CRqRsHb0EfGyhr7ExH-QZQ" name="Message18SendEvent" covered="_o1-wYHVlEfGpWMUEQ7eXIg" message="_CRpqoHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CRq4wHb0EfGyhr7ExH-QZQ" name="Message18ReceiveEvent" covered="_n5eE0HVlEfGpWMUEQ7eXIg" message="_CRpqoHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xfPrIXb4EfGyhr7ExH-QZQ" name="Message20SendEvent" covered="_n5eE0HVlEfGpWMUEQ7eXIg" message="_xfPrIHb4EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xfPrInb4EfGyhr7ExH-QZQ" name="Message20ReceiveEvent" covered="_mXt-MHVlEfGpWMUEQ7eXIg" message="_xfPrIHb4EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dAfEwHb0EfGyhr7ExH-QZQ" name="Message21SendEvent" covered="_mXt-MHVlEfGpWMUEQ7eXIg" message="_dAd2oHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dAfr0Hb0EfGyhr7ExH-QZQ" name="Message21ReceiveEvent" covered="_X_nL4Hb0EfGyhr7ExH-QZQ" message="_dAd2oHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_js5u4HbzEfGyhr7ExH-QZQ" name="Message4ReceiveEvent" covered="_mXt-MHVlEfGpWMUEQ7eXIg" message="_jsbNwHbzEfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_jsbNwHbzEfGyhr7ExH-QZQ" name="hazard_detected" messageSort="asynchCall" receiveEvent="_js5u4HbzEfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_oXDw4HbzEfGyhr7ExH-QZQ" name="operates_suppression_equipment" receiveEvent="_oXFmEHbzEfGyhr7ExH-QZQ" sendEvent="_oXE_AHbzEfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_CQ7R4Hb0EfGyhr7ExH-QZQ" name="request_water_supply" receiveEvent="_CQ9HEHb0EfGyhr7ExH-QZQ" sendEvent="_CQ8gAHb0EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_CRpqoHb0EfGyhr7ExH-QZQ" name="water_supply_granted" messageSort="reply" receiveEvent="_CRq4wHb0EfGyhr7ExH-QZQ" sendEvent="_CRqRsHb0EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_dAd2oHb0EfGyhr7ExH-QZQ" name="hazard_cleared" messageSort="asynchCall" receiveEvent="_dAfr0Hb0EfGyhr7ExH-QZQ" sendEvent="_dAfEwHb0EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_xfPrIHb4EfGyhr7ExH-QZQ" name="hazard_suppressed" messageSort="asynchCall" receiveEvent="_xfPrInb4EfGyhr7ExH-QZQ" sendEvent="_xfPrIXb4EfGyhr7ExH-QZQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_nllbMHb0EfGyhr7ExH-QZQ" name="SD_Low_water_condition">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_urrUIHb0EfGyhr7ExH-QZQ" name="Maintenance Person" coveredBy="_qqv_4Xb1EfGyhr7ExH-QZQ _r-ftMHeZEfGyhr7ExH-QZQ _9de0MHb3EfGyhr7ExH-QZQ _9dfbQHb3EfGyhr7ExH-QZQ _-CeNEHb2EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_xtKvMHb0EfGyhr7ExH-QZQ" name="WMU" coveredBy="_FGAzMHb1EfGyhr7ExH-QZQ _FGfUUXb1EfGyhr7ExH-QZQ _r-gUQHeZEfGyhr7ExH-QZQ _5HekoHb0EfGyhr7ExH-QZQ"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_yhLmEHb0EfGyhr7ExH-QZQ" name="MCU" coveredBy="_FGBaQHb1EfGyhr7ExH-QZQ _FGfUUHb1EfGyhr7ExH-QZQ _qqv_4Hb1EfGyhr7ExH-QZQ _FGbp8Hb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FGAzMHb1EfGyhr7ExH-QZQ" name="Message6SendEvent" covered="_xtKvMHb0EfGyhr7ExH-QZQ" message="_FGAMIHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FGBaQHb1EfGyhr7ExH-QZQ" name="Message6ReceiveEvent" covered="_yhLmEHb0EfGyhr7ExH-QZQ" message="_FGAMIHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_FGbp8Hb1EfGyhr7ExH-QZQ" name="BehaviorExecutionSpecification9" covered="_yhLmEHb0EfGyhr7ExH-QZQ" finish="_FGfUUHb1EfGyhr7ExH-QZQ" start="_FGBaQHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FGfUUHb1EfGyhr7ExH-QZQ" name="Message11SendEvent" covered="_yhLmEHb0EfGyhr7ExH-QZQ" message="_FGetQHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FGfUUXb1EfGyhr7ExH-QZQ" name="Message11ReceiveEvent" covered="_xtKvMHb0EfGyhr7ExH-QZQ" message="_FGetQHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qqv_4Hb1EfGyhr7ExH-QZQ" name="Message16SendEvent" covered="_yhLmEHb0EfGyhr7ExH-QZQ" message="_qquxwHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qqv_4Xb1EfGyhr7ExH-QZQ" name="Message16ReceiveEvent" covered="_urrUIHb0EfGyhr7ExH-QZQ" message="_qquxwHb1EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-ftMHeZEfGyhr7ExH-QZQ" name="Message24SendEvent" covered="_urrUIHb0EfGyhr7ExH-QZQ" message="_r-d4AHeZEfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-gUQHeZEfGyhr7ExH-QZQ" name="Message24ReceiveEvent" covered="_xtKvMHb0EfGyhr7ExH-QZQ" message="_r-d4AHeZEfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9de0MHb3EfGyhr7ExH-QZQ" name="Message24SendEvent" covered="_urrUIHb0EfGyhr7ExH-QZQ" message="_9dcX8Hb3EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9dfbQHb3EfGyhr7ExH-QZQ" name="Message24ReceiveEvent" covered="_urrUIHb0EfGyhr7ExH-QZQ" message="_9dcX8Hb3EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5HekoHb0EfGyhr7ExH-QZQ" name="Message4ReceiveEvent" covered="_xtKvMHb0EfGyhr7ExH-QZQ" message="_5HdWgHb0EfGyhr7ExH-QZQ"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_-CeNEHb2EfGyhr7ExH-QZQ" name="Message23ReceiveEvent" covered="_urrUIHb0EfGyhr7ExH-QZQ" message="_-CdmAHb2EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_5HdWgHb0EfGyhr7ExH-QZQ" name="low_water_detected" messageSort="asynchCall" receiveEvent="_5HekoHb0EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_FGAMIHb1EfGyhr7ExH-QZQ" name="low_water_alert_notification" receiveEvent="_FGBaQHb1EfGyhr7ExH-QZQ" sendEvent="_FGAzMHb1EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_FGetQHb1EfGyhr7ExH-QZQ" name="low_water_level_acknowledged" messageSort="reply" receiveEvent="_FGfUUXb1EfGyhr7ExH-QZQ" sendEvent="_FGfUUHb1EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_qquxwHb1EfGyhr7ExH-QZQ" name="low_water_signal_received" messageSort="asynchCall" receiveEvent="_qqv_4Xb1EfGyhr7ExH-QZQ" sendEvent="_qqv_4Hb1EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_-CdmAHb2EfGyhr7ExH-QZQ" name="overflow_observed" messageSort="asynchCall" receiveEvent="_-CeNEHb2EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_9dcX8Hb3EfGyhr7ExH-QZQ" name="stops_refill" messageSort="asynchCall" receiveEvent="_9dfbQHb3EfGyhr7ExH-QZQ" sendEvent="_9de0MHb3EfGyhr7ExH-QZQ"/>
+      <message xmi:type="uml:Message" xmi:id="_r-d4AHeZEfGyhr7ExH-QZQ" name="manual_refill" messageSort="asynchCall" receiveEvent="_r-gUQHeZEfGyhr7ExH-QZQ" sendEvent="_r-ftMHeZEfGyhr7ExH-QZQ"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OVJXgGpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OVOQAGpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXJioGpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXKJsGpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXSskGpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXTToGpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXTToWpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXTTompYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXTTo2pYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXT6sGpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXT6sWpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXUhwGpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXUhwWpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXUhwmpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXVI0GpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXVI0WpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXVv4GpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXVv4WpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML16_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_OXWW8GpYEfGUytx5oYpA9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OXWW8WpYEfGUytx5oYpA9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xCL94HIlEfGBCven3WVkOQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xCb1gHIlEfGBCven3WVkOQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_sbcdYHCSEfGBCven3WVkOQ" base_NamedElement="_saFLcHCSEfGBCven3WVkOQ" id="SYS-000" text="The Water Subsystem shall provide water storage, distribution, monitoring and control functions required for safe and continuous rail grinding operations.&#xD;&#xA;" base_Class="_saFLcHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_3V0gQHCSEfGBCven3WVkOQ" base_NamedElement="_3VuZoHCSEfGBCven3WVkOQ" id="SYS-001" text="The Water Subsystem shall store a minimum of 6000 litres of water for grinding operations." base_Class="_3VuZoHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_318KwHCSEfGBCven3WVkOQ" base_NamedElement="_312rMHCSEfGBCven3WVkOQ" id="SYS-002" text="The Water Subsystem shall supply water to the grinding unit at the required flow rate during normal operations." base_Class="_312rMHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_4QMd0HCSEfGBCven3WVkOQ" base_NamedElement="_4QHlUHCSEfGBCven3WVkOQ" id="SYS-003" text="The Water Subsystem shall activate hazard suppression water supply upon detection of a fire or heat event." base_Class="_4QHlUHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_4d4UgHCSEfGBCven3WVkOQ" base_NamedElement="_4d0DEHCSEfGBCven3WVkOQ" id="SYS-004" text="The Water Subsystem shall supply hazard suppression water at a minimum flow rate of 60 litres per minute through at least one water cannon with a minimum reach of 20 metres." base_Class="_4d0DEHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_4pvmQHCSEfGBCven3WVkOQ" base_NamedElement="_4pr74HCSEfGBCven3WVkOQ" id="SYS-005" text="The Water Subsystem shall provide a 60m hose nozzle and independently controlled sleeper and ditch spray nozzles for front and rear coverage." base_Class="_4pr74HCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_60auEHCSEfGBCven3WVkOQ" base_NamedElement="_60XDsHCSEfGBCven3WVkOQ" id="SYS-006" text="The Water Subsystem shall provide potable water supply to the crew at all times during operations." base_Class="_60XDsHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_7EE6sXCSEfGBCven3WVkOQ" base_NamedElement="_7EE6sHCSEfGBCven3WVkOQ" id="SYS-007" text="The Water Subsystem shall monitor tank water level and generate an alert when below minimum threshold." base_Class="_7EE6sHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_7QUm8HCSEfGBCven3WVkOQ" base_NamedElement="_7QQ8kHCSEfGBCven3WVkOQ" id="SYS-008" text="The Water Subsystem shall execute a full emergency shutdown of water flow within 5 seconds of trigger." base_Class="_7QQ8kHCSEfGBCven3WVkOQ"/>
+  <Requirements:Requirement xmi:id="_7ehbAHCSEfGBCven3WVkOQ" base_NamedElement="_7eeXsHCSEfGBCven3WVkOQ" id="SYS-009" text="The Water Subsystem shall support external filling from a ground supply connection." base_Class="_7eeXsHCSEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_W9f_AHCbEfGBCven3WVkOQ" base_Class="_W9bGgHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_evpssHCbEfGBCven3WVkOQ" base_Class="_evk0MHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_gVGAgHCbEfGBCven3WVkOQ" base_Class="_gVBvEHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_ieXaIHCbEfGBCven3WVkOQ" base_Class="_ieShoHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_l0VQYHCbEfGBCven3WVkOQ" base_Class="_l0RmAHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_u-1REHCbEfGBCven3WVkOQ" base_Class="_u-xmsHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="__xqVEHCbEfGBCven3WVkOQ" base_Class="__xmqsHCbEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_wVeB8HCdEfGBCven3WVkOQ" base_Class="_wVblsHCdEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_5aDA0HCdEfGBCven3WVkOQ" base_Class="_5Z_WcHCdEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_9GF0wHCdEfGBCven3WVkOQ" base_Class="_9GCKYHCdEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="__ZO8EHCdEfGBCven3WVkOQ" base_Class="__ZL4wHCdEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_CGU0cHCeEfGBCven3WVkOQ" base_Class="_CGRxIHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_QX6DsHCeEfGBCven3WVkOQ" base_Class="_QX1yQHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_V3OMEHCeEfGBCven3WVkOQ" base_Class="_V3KhsHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_aXLwQHCeEfGBCven3WVkOQ" base_Class="_aXHe0HCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_dRQ7wHCeEfGBCven3WVkOQ" base_Class="_dRN4cHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_f9yMYHCeEfGBCven3WVkOQ" base_Class="_f9vJEHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_qmlXEHCeEfGBCven3WVkOQ" base_Class="_qmiTwHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_tY0OIHCeEfGBCven3WVkOQ" base_Class="_tYwjwHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_wKgSoHCeEfGBCven3WVkOQ" base_Class="_wKdPUHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_0PAC0HCeEfGBCven3WVkOQ" base_Class="_0O8_gHCeEfGBCven3WVkOQ"/>
+  <Blocks:Block xmi:id="_Waa9wHC0EfGBCven3WVkOQ" base_Class="_WaJQ8HC0EfGBCven3WVkOQ"/>
+  <DeprecatedElements:FlowPort xmi:id="_DsFZ4HC1EfGBCven3WVkOQ" base_Port="_Dr1iQHC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_M-0JgHC1EfGBCven3WVkOQ" base_Port="_M-mHEHC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_Pt93YHC1EfGBCven3WVkOQ" base_Port="_Pt4X0HC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_XUNQAHC1EfGBCven3WVkOQ" base_Port="_XUIXgHC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_eD8ecHC1EfGBCven3WVkOQ" base_Port="_eD2-4HC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_j5VkgHC1EfGBCven3WVkOQ" base_Port="_j5QsAHC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_vCXHYHC1EfGBCven3WVkOQ" base_Port="_vCSO4HC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_vgDwAHC1EfGBCven3WVkOQ" base_Port="_vf_ekHC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_wZHe8XC1EfGBCven3WVkOQ" base_Port="_wZHe8HC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_4hn3IHC1EfGBCven3WVkOQ" base_Port="_4hi-oHC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_6LpwAHC1EfGBCven3WVkOQ" base_Port="_6Lk3gHC1EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_847OkHC1EfGBCven3WVkOQ" base_Port="_842WEHC1EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_ENPwwHC2EfGBCven3WVkOQ" base_Port="_ENK4QHC2EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_FOkq4HC2EfGBCven3WVkOQ" base_Port="_FOgZcHC2EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_JokxAHC2EfGBCven3WVkOQ" base_Port="_Jof4gHC2EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_Kd850HC2EfGBCven3WVkOQ" base_Port="_Kd5PcHC2EfGBCven3WVkOQ" direction="out"/>
+  <DeprecatedElements:FlowPort xmi:id="_Ml7S8HC2EfGBCven3WVkOQ" base_Port="_Ml3BgHC2EfGBCven3WVkOQ" direction="in"/>
+  <DeprecatedElements:FlowPort xmi:id="_NoKMAHC2EfGBCven3WVkOQ"/>
+  <DeprecatedElements:FlowPort xmi:id="_k35pEHC2EfGBCven3WVkOQ" base_Port="_k31XoHC2EfGBCven3WVkOQ" direction="out"/>
+  <Blocks:NestedConnectorEnd xmi:id="_3hN6EHFlEfGBCven3WVkOQ" base_Element="_3hMr8HFlEfGBCven3WVkOQ" propertyPath="_w126yHC0EfGBCven3WVkOQ" base_ConnectorEnd="_3hMr8HFlEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_3hOhIHFlEfGBCven3WVkOQ" base_Element="_3hMr8XFlEfGBCven3WVkOQ" propertyPath="_w11soHC0EfGBCven3WVkOQ" base_ConnectorEnd="_3hMr8XFlEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_j2dKMnFmEfGBCven3WVkOQ" base_Element="_j2dKMHFmEfGBCven3WVkOQ" propertyPath="_uJbwwHC0EfGBCven3WVkOQ" base_ConnectorEnd="_j2dKMHFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_j2eYUHFmEfGBCven3WVkOQ" base_Element="_j2dKMXFmEfGBCven3WVkOQ" propertyPath="_w11soHC0EfGBCven3WVkOQ" base_ConnectorEnd="_j2dKMXFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_wYyCUXFmEfGBCven3WVkOQ" base_Element="_wYxbQHFmEfGBCven3WVkOQ" propertyPath="_uJbwwHC0EfGBCven3WVkOQ" base_ConnectorEnd="_wYxbQHFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_wYzQcHFmEfGBCven3WVkOQ" base_Element="_wYyCUHFmEfGBCven3WVkOQ" propertyPath="_w126yHC0EfGBCven3WVkOQ" base_ConnectorEnd="_wYyCUHFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_3igeEHFmEfGBCven3WVkOQ" base_Element="_3if3AHFmEfGBCven3WVkOQ" propertyPath="_w126yHC0EfGBCven3WVkOQ" base_ConnectorEnd="_3if3AHFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_3ihFIHFmEfGBCven3WVkOQ" base_Element="_3if3AXFmEfGBCven3WVkOQ" propertyPath="_w16lKHC0EfGBCven3WVkOQ" base_ConnectorEnd="_3if3AXFmEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_CQLhsnFnEfGBCven3WVkOQ" base_Element="_CQLhsHFnEfGBCven3WVkOQ" propertyPath="_uJbwwHC0EfGBCven3WVkOQ" base_ConnectorEnd="_CQLhsHFnEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_CQMIwHFnEfGBCven3WVkOQ" base_Element="_CQLhsXFnEfGBCven3WVkOQ" propertyPath="_w14v-HC0EfGBCven3WVkOQ" base_ConnectorEnd="_CQLhsXFnEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_MpBk0XFnEfGBCven3WVkOQ" base_Element="_MpA9wHFnEfGBCven3WVkOQ" propertyPath="_uJbwwHC0EfGBCven3WVkOQ" base_ConnectorEnd="_MpA9wHFnEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_MpCL4HFnEfGBCven3WVkOQ" base_Element="_MpBk0HFnEfGBCven3WVkOQ" propertyPath="_w1ypUHC0EfGBCven3WVkOQ" base_ConnectorEnd="_MpBk0HFnEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_ayVB0XFnEfGBCven3WVkOQ" base_Element="_ayUawHFnEfGBCven3WVkOQ" propertyPath="_w16lKHC0EfGBCven3WVkOQ" base_ConnectorEnd="_ayUawHFnEfGBCven3WVkOQ"/>
+  <Blocks:NestedConnectorEnd xmi:id="_ayVo4HFnEfGBCven3WVkOQ" base_Element="_ayVB0HFnEfGBCven3WVkOQ" propertyPath="_uJbwwHC0EfGBCven3WVkOQ" base_ConnectorEnd="_ayVB0HFnEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_rbu1UHFtEfGBCven3WVkOQ" base_DirectedRelationship="_rbdvkHFtEfGBCven3WVkOQ" base_Abstraction="_rbdvkHFtEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_8Hdy0HFtEfGBCven3WVkOQ" base_DirectedRelationship="_8HV3AHFtEfGBCven3WVkOQ" base_Abstraction="_8HV3AHFtEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_DyPtMHFuEfGBCven3WVkOQ" base_DirectedRelationship="_DyEuEHFuEfGBCven3WVkOQ" base_Abstraction="_DyEuEHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_GqBLkHFuEfGBCven3WVkOQ" base_DirectedRelationship="_Gp8TEHFuEfGBCven3WVkOQ" base_Abstraction="_Gp8TEHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_HrGOEHFuEfGBCven3WVkOQ" base_DirectedRelationship="_HrBVkHFuEfGBCven3WVkOQ" base_Abstraction="_HrBVkHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_JJRcQXFuEfGBCven3WVkOQ" base_DirectedRelationship="_JJRcQHFuEfGBCven3WVkOQ" base_Abstraction="_JJRcQHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_KJ6Z4HFuEfGBCven3WVkOQ" base_DirectedRelationship="_KJ1hYHFuEfGBCven3WVkOQ" base_Abstraction="_KJ1hYHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_LCPJAHFuEfGBCven3WVkOQ" base_DirectedRelationship="_LCK3kHFuEfGBCven3WVkOQ" base_Abstraction="_LCK3kHFuEfGBCven3WVkOQ"/>
+  <Requirements:Satisfy xmi:id="_hzF1MHFvEfGBCven3WVkOQ" base_DirectedRelationship="_hy9SUHFvEfGBCven3WVkOQ" base_Abstraction="_hy9SUHFvEfGBCven3WVkOQ"/>
+</xmi:XMI>
